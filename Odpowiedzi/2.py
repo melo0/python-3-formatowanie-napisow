@@ -17,6 +17,9 @@ start = float(input("Stan początkowy konta wynosi: "))
 rate = float(input("Stopa oprocenotowania w skali roku: "))
 
 n = int(input("Liczba lat na lokacie: "))
-end = start*(1 + rate*n)
+# end = start*(1 + rate*n)
+
+# wzór uwzględniający kapitalizację odsetek na koniec roku oraz procent podany w formacie liczby całkowitej
+end = start* ((1 + rate/100)**n)
 
 print("Po {} latach kapitał będzie wynosił {} zł".format(n, end))
